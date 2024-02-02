@@ -11,6 +11,8 @@ import { ProductsComponent } from './products/products.component';
 import { MyFirstComponent } from './my-first/my-first.component';
 import { NewProductComponent } from './new-product/new-product.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import {NgOptimizedImage} from "@angular/common";
+import {MyFirstService} from "./services/my-first.service";
 
 @NgModule({
   declarations: [
@@ -26,9 +28,11 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    NgOptimizedImage,
   ],
   providers: [
+    MyFirstService,
     HttpClient,
   ],
   bootstrap: [AppComponent]
